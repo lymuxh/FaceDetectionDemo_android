@@ -1,0 +1,1 @@
+include ':app', ':library_camera', ':library_opencv', ':library_face_detect', ':library_liveness', ':library_speaker', ':library_codec'

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cg.camera.RecordVideoActivity">
+
+    <com.cg.camera.RecordVideoView
+        android:id="@+id/record_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,3:4"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_video_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="startRecord"
+        android:text="开始/结束"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/record_video"/>
+
+    <Button
+        android:id="@+id/btn_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onPause"
+        android:text="暂停/继续"
+        app:layout_constraintEnd_toStartOf="@+id/btn_change_camera"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_video_record"
+        app:layout_constraintTop_toBottomOf="@id/record_video"/>
+
+    <Button
+        android:id="@+id/btn_change_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onChangeCamera"
+        android:text="切换摄像头"
+        app:layout_constraintEnd_toStartOf="@+id/btn_change_flash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_pause"
+        app:layout_constraintTop_toBottomOf="@id/record_video"/>
+
+    <Button
+        android:id="@+id/btn_change_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onChangeFlash"
+        android:text="闪光灯"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_change_camera"
+        app:layout_constraintTop_toBottomOf="@id/record_video"/>
+
+</android.support.constraint.ConstraintLayout>
